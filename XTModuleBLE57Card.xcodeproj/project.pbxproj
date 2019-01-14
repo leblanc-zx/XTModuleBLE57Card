@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		186182BB21D07B890013DBBB /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 186182B921D07B890013DBBB /* LICENSE */; };
 		186182BC21D07B890013DBBB /* XTModuleBLE57Card.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 186182BA21D07B890013DBBB /* XTModuleBLE57Card.podspec */; };
-		189A248D21EC738A004C530B /* XT57CardInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 189A248621EC738A004C530B /* XT57CardInfo.h */; };
+		189A248D21EC738A004C530B /* XT57CardInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 189A248621EC738A004C530B /* XT57CardInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		189A248E21EC738A004C530B /* XT57CardInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A248721EC738A004C530B /* XT57CardInfo.m */; };
-		189A248F21EC738A004C530B /* XTBLE57CardParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 189A248921EC738A004C530B /* XTBLE57CardParse.h */; };
+		189A248F21EC738A004C530B /* XTBLE57CardParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 189A248921EC738A004C530B /* XTBLE57CardParse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		189A249021EC738A004C530B /* XTBLE57CardParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A248A21EC738A004C530B /* XTBLE57CardParse.m */; };
-		189A249121EC738A004C530B /* XTBLE57CardRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 189A248B21EC738A004C530B /* XTBLE57CardRequest.h */; };
+		189A249121EC738A004C530B /* XTBLE57CardRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 189A248B21EC738A004C530B /* XTBLE57CardRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		189A249221EC738A004C530B /* XTBLE57CardRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A248C21EC738A004C530B /* XTBLE57CardRequest.m */; };
+		189A249421EC9A22004C530B /* XTComponentBLE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189A249321EC9A22004C530B /* XTComponentBLE.framework */; };
+		189A249621EC9A22004C530B /* XTComponentUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189A249521EC9A22004C530B /* XTComponentUtils.framework */; };
 		88534F19A157659A3AC3915E /* Pods_XTModuleBLE57Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D95F88B5BBB37A46BDE5518 /* Pods_XTModuleBLE57Card.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		189A248A21EC738A004C530B /* XTBLE57CardParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTBLE57CardParse.m; sourceTree = "<group>"; };
 		189A248B21EC738A004C530B /* XTBLE57CardRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTBLE57CardRequest.h; sourceTree = "<group>"; };
 		189A248C21EC738A004C530B /* XTBLE57CardRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTBLE57CardRequest.m; sourceTree = "<group>"; };
+		189A249321EC9A22004C530B /* XTComponentBLE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XTComponentBLE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		189A249521EC9A22004C530B /* XTComponentUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XTComponentUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F8681DC2CEB21E311CC7944 /* Pods-XTModuleBLE57Card.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTModuleBLE57Card.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XTModuleBLE57Card/Pods-XTModuleBLE57Card.debug.xcconfig"; sourceTree = "<group>"; };
 		C41DE10B24CB36195B1D8A3A /* Pods-XTModuleBLE57Card.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTModuleBLE57Card.release.xcconfig"; path = "Pods/Target Support Files/Pods-XTModuleBLE57Card/Pods-XTModuleBLE57Card.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189A249421EC9A22004C530B /* XTComponentBLE.framework in Frameworks */,
+				189A249621EC9A22004C530B /* XTComponentUtils.framework in Frameworks */,
 				88534F19A157659A3AC3915E /* Pods_XTModuleBLE57Card.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +114,8 @@
 		56AE2E269FAF4466FDF69C03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				189A249321EC9A22004C530B /* XTComponentBLE.framework */,
+				189A249521EC9A22004C530B /* XTComponentUtils.framework */,
 				0D95F88B5BBB37A46BDE5518 /* Pods_XTModuleBLE57Card.framework */,
 			);
 			name = Frameworks;

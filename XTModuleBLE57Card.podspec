@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XTModuleBLE57Card'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'XTModuleBLE57Card.描述'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   #s.source_files = 'XTModuleBLE57Card/*.{h,m}'
-s.vendored_libraries = 'XTModuleBLE57Card/LocalDependency/**.a'
+
   # 配置子目录
 
   s.subspec 'Models' do |models|
@@ -47,8 +47,8 @@ s.vendored_libraries = 'XTModuleBLE57Card/LocalDependency/**.a'
   #   'XTModuleBLE57Card' => ['XTModuleBLE57Card/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit', 'MapKit'
+  # b = 'Pod/Classes/**/*.h'
+  s.frameworks = 'UIKit'
   s.dependency 'XTComponentUtils', '~> 1.1.1'
   s.dependency 'XTComponentBLE', '~> 1.0.1'
 end

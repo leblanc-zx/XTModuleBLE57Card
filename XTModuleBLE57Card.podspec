@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XTModuleBLE57Card'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'XTModuleBLE57Card.描述'
 
 # This description is used to generate tags and improve search results.
@@ -49,6 +49,7 @@ TODO: Add long description of the pod here.
 
   # b = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  s.dependency 'XTComponentUtils', '~> 1.1.1'
-  s.dependency 'XTComponentBLE', '~> 1.0.1'
+  s.dependency 'XTComponentUtils'
+  s.dependency 'XTComponentBLE'
+  s.dependency 'XTBLELogManager'
 end

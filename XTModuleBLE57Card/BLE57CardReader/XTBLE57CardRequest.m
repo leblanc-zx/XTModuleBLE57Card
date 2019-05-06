@@ -9,6 +9,7 @@
 #import "XTBLE57CardRequest.h"
 #import "XTBLEManager.h"
 #import "XTUtils.h"
+#import "XTBLEManager+Log.h"
 
 @interface XTBLE57CardRequest ()
 
@@ -64,6 +65,8 @@ static id _instace;
     
     //请求数据
     NSData *data = [dataManager read57Card];
+    //log
+    [[XTBLEManager sharedManager] log_method:@"读卡信息" startFilter:@"" endFilter:@"长度：29"];
     
     [manager sendData:data startFilter:nil endFilter:^BOOL(NSData *JointData) {
         return JointData.length == 29;
@@ -103,10 +106,39 @@ static id _instace;
     XTBLE57CardParse *dataManager = [XTBLE57CardParse sharedData];
     XTBLEManager *manager = [XTBLEManager sharedManager];
     
-    //请求数据
-    NSData *data = [dataManager write57CardWithCardInfoData:cardInfoData rechargeMoney:rechargeMoney rechargeCount:rechargeCount];
+    //判断是否已经写过卡
+    XT57CardInfo *tempCardInfo = [dataManager parse57CardWithUserSysNum:userSysNum data:cardInfoData];
+    if (tempCardInfo.thisRead > 0) {
+        if (failure) {
+            failure([NSError errorWithDomain:@"错误" code:11111 userInfo:@{@"NSLocalizedDescription":@"上次充值金额未刷到表,请刷表!"}]);
+        }
+        return;
+    }
     
-    [manager sendData:data startFilter:nil endFilter:^BOOL(NSData *JointData) {
+    //请求数据
+    NSData *sendData = [dataManager write57CardWithCardInfoData:cardInfoData rechargeMoney:rechargeMoney rechargeCount:rechargeCount];
+    
+    //判断请求数据是否正确
+    XT57CardInfo *tempSendCardInfo = [dataManager parse57CardWithUserSysNum:userSysNum data:sendData];
+    long recharge = 0;
+    if ([[tempSendCardInfo.cardType uppercaseString] isEqualToString:@"6A"]) {
+        //计金额
+        recharge = [rechargeMoney longLongValue];
+    } else {
+        //计量
+        recharge = [rechargeCount longLongValue];
+    }
+    if (tempSendCardInfo.thisRead != recharge) {
+        if (failure) {
+            failure([NSError errorWithDomain:@"错误" code:11111 userInfo:@{@"NSLocalizedDescription":@"写卡数据错误,请重试"}]);
+        }
+        return;
+    }
+    
+    //log
+    [[XTBLEManager sharedManager] log_method:@"写卡信息" startFilter:@"" endFilter:@"长度：29"];
+    
+    [manager sendData:sendData startFilter:nil endFilter:^BOOL(NSData *JointData) {
         return JointData.length == 29;
     } success:^(NSData *data) {
         //解析数据
@@ -141,7 +173,8 @@ static id _instace;
     XTBLEManager *manager = [XTBLEManager sharedManager];
     
     //请求数据
-    NSData *data = [dataManager requestReadVolgate];
+    NSData *data = [dataManager requestReadVolgate];//log
+    [[XTBLEManager sharedManager] log_method:@"读电池电压" startFilter:@"" endFilter:@"长度：7"];
     
     [manager sendData:data startFilter:nil endFilter:^BOOL(NSData *JointData) {
         return JointData.length == 7;

@@ -1,33 +1,43 @@
 PODS:
-  - XTComponentBLE (1.0.2):
-    - XTComponentBLE/BLE4 (= 1.0.2)
-    - XTComponentBLE/Models (= 1.0.2)
-  - XTComponentBLE/BLE4 (1.0.2):
+  - XTBLELogManager (1.0.3):
+    - XTBLELogManager/BLELog (= 1.0.3)
+    - XTComponentBLE
+    - XTComponentUtils
+  - XTBLELogManager/BLELog (1.0.3):
+    - XTComponentBLE
+    - XTComponentUtils
+  - XTComponentBLE (1.0.9):
+    - XTComponentBLE/BLE4 (= 1.0.9)
+    - XTComponentBLE/Models (= 1.0.9)
+  - XTComponentBLE/BLE4 (1.0.9):
     - XTComponentBLE/Models
-  - XTComponentBLE/Models (1.0.2)
-  - XTComponentUtils (1.1.3):
-    - XTComponentUtils/LocalDependency (= 1.1.3)
-    - XTComponentUtils/Models (= 1.1.3)
-    - XTComponentUtils/XTUtils (= 1.1.3)
-  - XTComponentUtils/LocalDependency (1.1.3)
-  - XTComponentUtils/Models (1.1.3)
-  - XTComponentUtils/XTUtils (1.1.3):
+  - XTComponentBLE/Models (1.0.9)
+  - XTComponentUtils (1.2.1):
+    - XTComponentUtils/LocalDependency (= 1.2.1)
+    - XTComponentUtils/Models (= 1.2.1)
+    - XTComponentUtils/XTUtils (= 1.2.1)
+  - XTComponentUtils/LocalDependency (1.2.1)
+  - XTComponentUtils/Models (1.2.1)
+  - XTComponentUtils/XTUtils (1.2.1):
     - XTComponentUtils/LocalDependency
     - XTComponentUtils/Models
 
 DEPENDENCIES:
-  - XTComponentBLE (~> 1.0.2)
-  - XTComponentUtils (~> 1.1.3)
+  - XTBLELogManager
+  - XTComponentBLE
+  - XTComponentUtils
 
 SPEC REPOS:
   https://github.com/leblanc-zx/ZXSpecs.git:
+    - XTBLELogManager
     - XTComponentBLE
     - XTComponentUtils
 
 SPEC CHECKSUMS:
-  XTComponentBLE: 0d81344724727ec715b722a60504eb78af4b776e
-  XTComponentUtils: ebaeff1af0a7fa570704be76657cd3044b296824
+  XTBLELogManager: e11e09293cb45c8ecee731c974dadd22cb820e84
+  XTComponentBLE: 313b47f5abc8a383be4c501d895a863af9c1ba58
+  XTComponentUtils: f21363ed093fdf7bd9f3c52ddfd6f353a60d9af9
 
-PODFILE CHECKSUM: 9e8829d5c2cc9be31cf64675a9fc3a7acbc4bbcb
+PODFILE CHECKSUM: adaf7c072fc0aad378bda356317946dd227a688b
 
 COCOAPODS: 1.5.0

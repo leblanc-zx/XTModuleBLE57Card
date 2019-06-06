@@ -1,17 +1,17 @@
 PODS:
-  - XTBLELogManager (1.0.3):
-    - XTBLELogManager/BLELog (= 1.0.3)
+  - XTBLELogManager (1.0.4):
+    - XTBLELogManager/BLELog (= 1.0.4)
     - XTComponentBLE
     - XTComponentUtils
-  - XTBLELogManager/BLELog (1.0.3):
+  - XTBLELogManager/BLELog (1.0.4):
     - XTComponentBLE
     - XTComponentUtils
-  - XTComponentBLE (1.0.9):
-    - XTComponentBLE/BLE4 (= 1.0.9)
-    - XTComponentBLE/Models (= 1.0.9)
-  - XTComponentBLE/BLE4 (1.0.9):
+  - XTComponentBLE (1.1.2):
+    - XTComponentBLE/BLE4 (= 1.1.2)
+    - XTComponentBLE/Models (= 1.1.2)
+  - XTComponentBLE/BLE4 (1.1.2):
     - XTComponentBLE/Models
-  - XTComponentBLE/Models (1.0.9)
+  - XTComponentBLE/Models (1.1.2)
   - XTComponentUtils (1.2.1):
     - XTComponentUtils/LocalDependency (= 1.2.1)
     - XTComponentUtils/Models (= 1.2.1)
@@ -24,7 +24,6 @@ PODS:
 
 DEPENDENCIES:
   - XTBLELogManager
-  - XTComponentBLE
   - XTComponentUtils
 
 SPEC REPOS:
@@ -34,10 +33,10 @@ SPEC REPOS:
     - XTComponentUtils
 
 SPEC CHECKSUMS:
-  XTBLELogManager: e11e09293cb45c8ecee731c974dadd22cb820e84
-  XTComponentBLE: 313b47f5abc8a383be4c501d895a863af9c1ba58
+  XTBLELogManager: 11d4cce0df071bdd8d34089eb3c4cdec48822cf3
+  XTComponentBLE: 61e94e3cbc8837f08b3a64932ef780e9576dcb52
   XTComponentUtils: f21363ed093fdf7bd9f3c52ddfd6f353a60d9af9
 
-PODFILE CHECKSUM: adaf7c072fc0aad378bda356317946dd227a688b
+PODFILE CHECKSUM: d5f273ff2fd09644de9a3e2cae0a77b2eadaf0f0
 
 COCOAPODS: 1.5.0

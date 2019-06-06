@@ -68,7 +68,7 @@ static id _instace;
     //log
     [[XTBLEManager sharedManager] log_method:@"读卡信息" startFilter:@"" endFilter:@"长度：29"];
     
-    [manager sendData:data startFilter:nil endFilter:^BOOL(NSData *JointData) {
+    [manager sendSimpleData:data startFilter:nil endFilter:^BOOL(NSData *JointData) {
         return JointData.length == 29;
     } success:^(NSData *data) {
         //解析数据
@@ -138,7 +138,7 @@ static id _instace;
     //log
     [[XTBLEManager sharedManager] log_method:@"写卡信息" startFilter:@"" endFilter:@"长度：29"];
     
-    [manager sendData:sendData startFilter:nil endFilter:^BOOL(NSData *JointData) {
+    [manager sendSimpleData:sendData startFilter:nil endFilter:^BOOL(NSData *JointData) {
         return JointData.length == 29;
     } success:^(NSData *data) {
         //解析数据
@@ -176,7 +176,7 @@ static id _instace;
     NSData *data = [dataManager requestReadVolgate];//log
     [[XTBLEManager sharedManager] log_method:@"读电池电压" startFilter:@"" endFilter:@"长度：7"];
     
-    [manager sendData:data startFilter:nil endFilter:^BOOL(NSData *JointData) {
+    [manager sendSimpleData:data startFilter:nil endFilter:^BOOL(NSData *JointData) {
         return JointData.length == 7;
     } success:^(NSData *data) {
         //解析数据

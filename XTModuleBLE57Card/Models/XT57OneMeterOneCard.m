@@ -1,19 +1,18 @@
 //
-//  XT57CardInfo.m
-//  QuickTopUp
+//  XT57OneMeterOneCard.m
+//  AFNetworking
 //
-//  Created by apple on 2018/6/1.
-//  Copyright © 2018年 apple. All rights reserved.
+//  Created by apple on 2019/6/27.
 //
 
-#import "XT57CardInfo.h"
+#import "XT57OneMeterOneCard.h"
 #import <objc/runtime.h>
 
-@implementation XT57CardInfo
+@implementation XT57OneMeterOneCard
 
 @end
 
-@implementation XT57CardInfo (Amount)
+@implementation XT57OneMeterOneCard (Amount)
 @dynamic remainedCount;
 @dynamic overCount;
 @dynamic warnCount;
@@ -44,7 +43,7 @@
 
 @end
 
-@implementation XT57CardInfo (Money)
+@implementation XT57OneMeterOneCard (Money)
 @dynamic remainedMoney;
 @dynamic overMoney;
 @dynamic warnMoney;

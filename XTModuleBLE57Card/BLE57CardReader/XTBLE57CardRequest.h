@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "XTBLE57CardParse.h"
+#import "XT57WriteInfo.h"
 
 @interface XTBLE57CardRequest : NSObject
 
@@ -19,15 +20,23 @@
  @param success 成功
  @param failure error
  */
-- (void)read57CardWithUserSysNum:(long)userSysNum success:(void (^)(XT57CardInfo *cardInfo))success failure:(void (^)(NSError *error))failure;
+- (void)read57CardWithUserSysNum:(long)userSysNum success:(void (^)(id cardInfo))success failure:(void (^)(NSError *error))failure;
 
 /**
- 写57卡信息
+ 写57卡一表一卡信息
  
  @param success 成功
  @param failure error
  */
-- (void)write57CardWithUserSysNum:(long)userSysNum cardInfoData:(NSData *)cardInfoData rechargeMoney:(NSString *)rechargeMoney rechargeCount:(NSString *)rechargeCount success:(void (^)(XT57CardInfo *cardInfo))success failure:(void (^)(NSError *error))failure;
+- (void)write57OneMeterOneCardWithUserSysNum:(long)userSysNum cardInfoData:(NSData *)cardInfoData writeInfo:(XT57WriteInfo *)writeInfo success:(void (^)(XT57OneMeterOneCard *cardInfo))success failure:(void (^)(NSError *error, NSData *sData))failure;
+
+/**
+ 写57卡一一卡通信息
+ 
+ @param success 成功
+ @param failure error
+ */
+- (void)write57OneCardMultipleMeterWithUserSysNum:(long)userSysNum cardInfoData:(NSData *)cardInfoData rechargeMoney:(NSString *)rechargeMoney rechargeCount:(NSString *)rechargeCount cardSector:(int)cardSector cardType:(int)cardType success:(void (^)(XT57OneCardMultipleMeter *cardInfo))success failure:(void (^)(NSError *error, NSData *sData))failure;
 
 /**
  读电池电压

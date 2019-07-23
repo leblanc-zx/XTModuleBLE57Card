@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1853957322D6E2730060AFA6 /* XT57WriteInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 1853957122D6E2730060AFA6 /* XT57WriteInfo.h */; };
+		1853957422D6E2730060AFA6 /* XT57WriteInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853957222D6E2730060AFA6 /* XT57WriteInfo.m */; };
 		186182BB21D07B890013DBBB /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 186182B921D07B890013DBBB /* LICENSE */; };
 		186182BC21D07B890013DBBB /* XTModuleBLE57Card.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 186182BA21D07B890013DBBB /* XTModuleBLE57Card.podspec */; };
-		189A248D21EC738A004C530B /* XT57CardInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 189A248621EC738A004C530B /* XT57CardInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		189A248E21EC738A004C530B /* XT57CardInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A248721EC738A004C530B /* XT57CardInfo.m */; };
+		1868C37822C46434004045A1 /* XT57OneCardMultipleMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868C37422C46433004045A1 /* XT57OneCardMultipleMeter.m */; };
+		1868C37922C46434004045A1 /* XT57OneMeterOneCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868C37522C46434004045A1 /* XT57OneMeterOneCard.m */; };
+		1868C37A22C46434004045A1 /* XT57OneMeterOneCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 1868C37622C46434004045A1 /* XT57OneMeterOneCard.h */; };
+		1868C37B22C46434004045A1 /* XT57OneCardMultipleMeter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1868C37722C46434004045A1 /* XT57OneCardMultipleMeter.h */; };
 		189A248F21EC738A004C530B /* XTBLE57CardParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 189A248921EC738A004C530B /* XTBLE57CardParse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		189A249021EC738A004C530B /* XTBLE57CardParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A248A21EC738A004C530B /* XTBLE57CardParse.m */; };
 		189A249121EC738A004C530B /* XTBLE57CardRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 189A248B21EC738A004C530B /* XTBLE57CardRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -22,12 +26,16 @@
 
 /* Begin PBXFileReference section */
 		0D95F88B5BBB37A46BDE5518 /* Pods_XTModuleBLE57Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XTModuleBLE57Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1853957122D6E2730060AFA6 /* XT57WriteInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XT57WriteInfo.h; sourceTree = "<group>"; };
+		1853957222D6E2730060AFA6 /* XT57WriteInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XT57WriteInfo.m; sourceTree = "<group>"; };
 		186182A021D0799D0013DBBB /* XTModuleBLE57Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XTModuleBLE57Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		186182A421D0799D0013DBBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		186182B921D07B890013DBBB /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		186182BA21D07B890013DBBB /* XTModuleBLE57Card.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XTModuleBLE57Card.podspec; sourceTree = "<group>"; };
-		189A248621EC738A004C530B /* XT57CardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XT57CardInfo.h; sourceTree = "<group>"; };
-		189A248721EC738A004C530B /* XT57CardInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XT57CardInfo.m; sourceTree = "<group>"; };
+		1868C37422C46433004045A1 /* XT57OneCardMultipleMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XT57OneCardMultipleMeter.m; sourceTree = "<group>"; };
+		1868C37522C46434004045A1 /* XT57OneMeterOneCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XT57OneMeterOneCard.m; sourceTree = "<group>"; };
+		1868C37622C46434004045A1 /* XT57OneMeterOneCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XT57OneMeterOneCard.h; sourceTree = "<group>"; };
+		1868C37722C46434004045A1 /* XT57OneCardMultipleMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XT57OneCardMultipleMeter.h; sourceTree = "<group>"; };
 		189A248921EC738A004C530B /* XTBLE57CardParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTBLE57CardParse.h; sourceTree = "<group>"; };
 		189A248A21EC738A004C530B /* XTBLE57CardParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTBLE57CardParse.m; sourceTree = "<group>"; };
 		189A248B21EC738A004C530B /* XTBLE57CardRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTBLE57CardRequest.h; sourceTree = "<group>"; };
@@ -85,8 +93,12 @@
 		189A248521EC738A004C530B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				189A248621EC738A004C530B /* XT57CardInfo.h */,
-				189A248721EC738A004C530B /* XT57CardInfo.m */,
+				1868C37722C46434004045A1 /* XT57OneCardMultipleMeter.h */,
+				1868C37422C46433004045A1 /* XT57OneCardMultipleMeter.m */,
+				1868C37622C46434004045A1 /* XT57OneMeterOneCard.h */,
+				1868C37522C46434004045A1 /* XT57OneMeterOneCard.m */,
+				1853957122D6E2730060AFA6 /* XT57WriteInfo.h */,
+				1853957222D6E2730060AFA6 /* XT57WriteInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -128,9 +140,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1868C37B22C46434004045A1 /* XT57OneCardMultipleMeter.h in Headers */,
 				189A248F21EC738A004C530B /* XTBLE57CardParse.h in Headers */,
+				1853957322D6E2730060AFA6 /* XT57WriteInfo.h in Headers */,
 				189A249121EC738A004C530B /* XTBLE57CardRequest.h in Headers */,
-				189A248D21EC738A004C530B /* XT57CardInfo.h in Headers */,
+				1868C37A22C46434004045A1 /* XT57OneMeterOneCard.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,8 +239,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				189A248E21EC738A004C530B /* XT57CardInfo.m in Sources */,
 				189A249021EC738A004C530B /* XTBLE57CardParse.m in Sources */,
+				1868C37922C46434004045A1 /* XT57OneMeterOneCard.m in Sources */,
+				1853957422D6E2730060AFA6 /* XT57WriteInfo.m in Sources */,
+				1868C37822C46434004045A1 /* XT57OneCardMultipleMeter.m in Sources */,
 				189A249221EC738A004C530B /* XTBLE57CardRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
